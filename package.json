@@ -1,0 +1,43 @@
+{
+  "name": "gatsby-transformer-plaintext",
+  "version": "1.0.0",
+  "description": "Gatsby transformer plugin for plain text files",
+  "main": "index.js",
+  "repository": "https://github.com/sdorra/gatsby-transformer-plaintext",
+  "bugs": {
+    "url": "https://github.com/sdorra/gatsby-transformer-plaintext/issues"
+  },
+  "author": "Sebastian Sdorra <s.sdorra@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "plaintext",
+    "text"
+  ],
+  "peerDependencies": {
+    "gatsby": "^2.0.15"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "babel-preset-gatsby-package": "^0.3.1",
+    "cross-env": "^7.0.2",
+    "jest": "^26.0.1",
+    "bluebird": "^3.7.2",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "build": "babel src --out-dir . --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  }
+}
